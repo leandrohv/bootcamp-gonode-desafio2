@@ -1,0 +1,17 @@
+{% extends "_layouts/auth.njk" %}
+
+{% block body %}
+  <form action="/signin" method="post">
+    <img src="/images/LogoGoNutri.svg" height="100" />
+    <label>Agendamentos para nutricionistas</label>
+
+    {% include "_partials/flash.njk" %}
+
+    <input type="email" name="email" placeholder="Seu e-mail">
+    <input type="password" name="password" placeholder="Senha secreta">
+
+    <button type="submit">Entrar</button>
+
+    <a href="/signup">Criar conta gráris</a>
+  </form>
+{% endblock %}
